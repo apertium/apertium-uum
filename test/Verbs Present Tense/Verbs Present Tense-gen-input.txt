@@ -1,0 +1,12 @@
+^сӧле<v><iv><pres><p1><sg>$
+^отур<v><iv><pres><p1><sg>$
+^ал<v><tv><pres><p2><sg>$
+^кӧр<v><tv><pres><p2><sg>$
+^сӧле<v><iv><pres><p3><sg>$
+^отур<v><iv><pres><p3><sg>$
+^сӧле<v><iv><pres><p1><pl>$
+^ал<v><tv><pres><p1><pl>$
+^отур<v><iv><pres><p2><pl>$
+^кӧр<v><tv><pres><p2><pl>$
+^ал<v><tv><pres><p3><pl>$
+^сӧле<v><iv><pres><p3><pl>$

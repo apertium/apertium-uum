@@ -1,0 +1,13 @@
+# NUMBER OF ALL FORMS #
+hfst-expand -c0 xyz.automorf.hfst | wc -l
+
+# NUMBER OF UNIQUE FORMS #
+hfst-expand -c0 xyz.automorf.hfst | cut -f1 -d':' | sort -u | wc -l
+
+# ANALYZE DIFF OF TOTAL UNIQUE FORMS AND NON-UNIQUE FORMS #
+hfst-expand -c0 xyz.automorf.hfst | cut -f1 -d':' | sort > /tmp/totalforms
+hfst-expand -c0 xyz.automorf.hfst | cut -f1 -d':' | sort -u > /tmp/uniqforms
+diff /tmp/totalforms /tmp/uniqforms
+
+# CURRENT CORPUS COVERAGE #
+coverage-hfst ../ling073-uum-corpus/uum.corpus.large.txt uum.automorf.hfst

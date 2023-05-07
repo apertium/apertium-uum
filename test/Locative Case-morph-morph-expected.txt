@@ -1,0 +1,12 @@
+[-eXW332XjSw9#0] ^бахчына/бахчы<n><px2sg><dat>$
+[/-eXW332XjSw9]
+[3941ZJfQS_07#0] ^эвме/эв<n><px1sg><dat>$
+[/3941ZJfQS_07]
+[NQCdFb99tftY#0] ^эвне/эв<n><px2sg><dat>$
+[/NQCdFb99tftY]
+[ZSg5_3Zofgtx#0] ^эвдэ/эв<n><loc>$
+[/ZSg5_3Zofgtx]
+[jH6Bq46j4_fL#0] ^бахчыда/бахчы<n><loc>$
+[/jH6Bq46j4_fL]
+[jVi5Bb-4S89i#0] ^бахчыма/бахчы<n><px1sg><dat>$
+[/jVi5Bb-4S89i]

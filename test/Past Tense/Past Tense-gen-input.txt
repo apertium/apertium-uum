@@ -1,0 +1,6 @@
+^башла<v><tv><past><p1><sg>$
+^вер<v><tv><past><p2><sg>$
+^отур<v><iv><past><p3><sg>$
+^чых<v><tv><past><p1><pl>$
+^кӧр<v><tv><past><p2><pl>$
+^отур<v><iv><past><p3><pl>$

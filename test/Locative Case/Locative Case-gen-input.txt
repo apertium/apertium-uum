@@ -1,0 +1,6 @@
+^эв<n><loc>$
+^эв<n><px1sg><loc>$
+^эв<n><px2sg><loc>$
+^бахчы<n><loc>$
+^бахчы<n><px1sg><loc>$
+^бахчы<n><px2sg><loc>$

@@ -1,0 +1,526 @@
+"<">"
+	""" quot
+"<Башла>"
+	"башла" v tv imp p1 sg
+	"башла" v tv imp p2 sg
+"<,>"
+	"," cm
+"<->"
+	"-" guio
+"<дэдим>"
+	"дэ" v iv past p1 sg
+"<->"
+	"-" guio
+"<башламадым>"
+	"башла" v tv neg past p1 sg
+"<,>"
+	"," cm
+
+"<башлавужу>"
+	"башлавужу" n nom
+"<йылдыз>"
+	"йылдыз" n nom
+"<доғду>"
+	"доғ" v iv past p3 pl
+	"доғ" v iv past p3 sg
+"<.>"
+	"." sent
+
+"<Панайана>"
+	"Панайана" np ant f sg nom
+"<Вифлейемдэ>"
+	"Вифлейем" np top sg loc
+"<тэна>"
+	"тэна" adj
+	"тэна" adj subst
+"<йер>"
+	"йер" n nom
+"<булмады>"
+	"бул" v tv neg past p3 pl
+	"бул" v tv neg past p3 sg
+"<кӧйдʼе>"
+	"кӧй" n loc
+"<.>"
+	"." sent
+
+"<Йосиф>"
+	"Йосиф" np ant m sg nom
+"<илен>"
+	"илен" pr
+"<тʼетти>"
+	"тʼет" v iv past p3 pl
+	"тʼет" v iv past p3 sg
+"<чӧльдʼе>"
+	"чӧль" n loc
+"<,>"
+	"," cm
+"<пичен>"
+	"пичен" n nom
+"<илен>"
+	"илен" pr
+"<йасла>"
+	"йасла" n nom
+"<булду>"
+	"бул" v tv past p3 pl
+	"бул" v tv past p3 sg
+"<.>"
+	"." sent
+
+"<Вахыт>"
+	"вахыт" n nom
+"<тʼельди>"
+	"тʼель" v iv past p3 pl
+	"тʼель" v iv past p3 sg
+"<->"
+	"-" guio
+"<Христос>"
+	"Христос" np ant m sg nom
+"<доғду>"
+	"доғ" v iv past p3 pl
+	"доғ" v iv past p3 sg
+"<,>"
+	"," cm
+"<сарып>"
+	"*сарып"
+"<йасла>"
+	"йасла" n nom
+"<чине>"
+	"чине" pr
+"<хойду>"
+	"хой" v tv past p3 pl
+	"хой" v tv past p3 sg
+"<.>"
+	"." sent
+
+"<Кӱн доғуштан>"
+	"кӱн доғуш" n abl
+"<ышхын>"
+	"ышхын" n nom
+"<доғду>"
+	"доғ" v iv past p3 pl
+	"доғ" v iv past p3 sg
+"<,>"
+	"," cm
+
+"<ышхындан>"
+	"ышхын" n abl
+"<йылдыз>"
+	"йылдыз" n nom
+"<кӧрӱндӱ>"
+	"кӧрӱн" v iv past p3 pl
+	"кӧрӱн" v iv past p3 sg
+"<,>"
+	"," cm
+
+"<чобанлар>"
+	"чобан" n pl nom
+"<да>"
+	"да" part
+"<хорхундулар>"
+	"хорхун" v iv past p3 pl
+"<:>"
+	":" sent
+
+"<">"
+	""" quot
+"<Бу>"
+	"бу" det
+"<нас>"
+	"нас" adv
+	"нас" prn det dem
+"<йарых>"
+	"йарых" adj
+	"йарых" adj subst
+"<бу>"
+	"бу" det
+"<->"
+	"-" guio
+"<дэдилер>"
+	"дэ" v iv past p3 pl
+"<.>"
+	"." sent
+
+"<Кӧктэн>"
+	"кӧк" n abl
+"<мелайиклер>"
+	"мелайик" n pl nom
+"<энди>"
+	"эн" v iv past p3 pl
+	"эн" v iv past p3 sg
+"<,>"
+	"," cm
+"<чобанлара>"
+	"чобан" n pl dat
+"<гӧңӱль>"
+	"гӧңӱль" n nom
+"<верди>"
+	"вер" v tv past p3 pl
+	"вер" v tv past p3 sg
+"<:>"
+	":" sent
+
+"<">"
+	""" quot
+"<Бӱйӱк>"
+	"бӱйӱк" adj
+	"бӱйӱк" adj subst
+"<аллах>"
+	"аллах" n nom
+"<доғду>"
+	"доғ" v iv past p3 pl
+	"доғ" v iv past p3 sg
+"<,>"
+	"," cm
+"<->"
+	"-" guio
+"<дэди>"
+	"дэ" v iv past p3 pl
+	"дэ" v iv past p3 sg
+	"дэди" unk
+"<,>"
+	"," cm
+"<->"
+	"-" guio
+"<,>"
+	"," cm
+ 
+"<варың>"
+	"*варың"
+"<да>"
+	"да" part
+"<баш>"
+	"баш" n nom
+"<уруң>"
+	"уруң" v iv imp p1 sg
+	"уруң" v iv imp p2 sg
+"<">"
+	""" quot
+"<,>"
+	"," cm
+"<->"
+	"-" guio
+"<дэди>"
+	"дэ" v iv past p3 pl
+	"дэ" v iv past p3 sg
+	"дэди" unk
+"<.>"
+	"." sent
+
+"<Мелайиклер>"
+	"мелайик" n pl nom
+"<хонуштулар>"
+	"хонуш" v iv past p3 pl
+"<,>"
+	"," cm
+"<азиз>"
+	"азиз" adj
+	"азиз" adj subst
+"<тӱркӱ>"
+	"тӱрк" n acc
+"<йырладылар>"
+	"йырла" v iv past p3 pl
+"<.>"
+	"." sent
+
+"<Кӱн доғуштан>"
+	"кӱн доғуш" n abl
+"<йылдыз>"
+	"йылдыз" n nom
+"<кельди>"
+	"кель" v iv past p3 pl
+	"кель" v iv past p3 sg
+"<,>"
+	"," cm
+"<айдавҗусу>"
+	"*айдавҗусу"
+"<бӱльбӱль>"
+	"бӱльбӱль" n nom
+"<эди>"
+	"э" v tv past p3 pl
+	"э" v tv past p3 sg
+	"эди" unk
+"<.>"
+	"." sent
+
+"<Учхун>"
+	"учхун" n nom
+"<йелир>"
+	"йелир" v iv imp p1 sg
+	"йелир" v iv imp p2 sg
+"<,>"
+	"," cm
+"<йундуз>"
+	"йундуз" n nom
+"<хонду>"
+	"хон" v iv past p3 pl
+	"хон" v iv past p3 sg
+"<,>"
+	"," cm
+"<чобаллара>"
+	"чобан" n pl dat
+"<мельэм>"
+	"мельэм" n nom
+"<олду>"
+	"ол" v iv past p3 pl
+	"ол" v iv past p3 sg
+	"олду" unk
+"<,>"
+	"," cm
+"<->"
+	"-" guio
+
+"<Вифлейемдэ>"
+	"Вифлейем" np top sg loc
+"<Христос>"
+	"Христос" np ant m sg nom
+"<доғду>"
+	"доғ" v iv past p3 pl
+	"доғ" v iv past p3 sg
+"<.>"
+	"." sent
+ 
+"<Ол>"
+	"ол" v iv imp p1 sg
+	"ол" v iv imp p2 sg
+"<бешиге>"
+	"бешик" n dat
+"<эништилер>"
+	"эниш" v iv past p3 pl
+"<,>"
+	"," cm
+"<ичиндэ>"
+	"ич" n px3sg loc
+	"ич" n px3pl loc
+"<Христос>"
+	"Христос" np ant m sg nom
+"<кӧрдӱлер>"
+	"кӧр" v tv past p3 pl
+"<,>"
+	"," cm
+"<севиндилер>"
+	"севин" v iv past p3 pl
+"<доғушуна>"
+	"доғуш" n px3sg dat
+	"доғуш" n px3pl dat
+"<,>"
+	"," cm
+"<бу>"
+	"бу" det
+"<дӱнйайа>"
+	"дӱнйа" n dat
+"<келишине>"
+	"келиш" n px3sg dat
+	"келиш" n px3pl dat
+"<.>"
+	"." sent
+
+"<Бӱйӱгӱ>"
+	"бӱйӱгӱ" n nom
+"<->"
+	"-" guio
+"<оҗа>"
+	"оҗа" n nom
+"<кӧрдӱ>"
+	"кӧр" v tv past p3 pl
+	"кӧр" v tv past p3 sg
+"<,>"
+	"," cm
+
+"<ортанҗысы>"
+	"ортанҗысы" n nom
+"<->"
+	"-" guio
+"<игит>"
+	"игит" n nom
+"<кӧрдӱ>"
+	"кӧр" v tv past p3 pl
+	"кӧр" v tv past p3 sg
+"<,>"
+	"," cm
+
+"<эң>"
+	"*эң"
+"<кичиги>"
+	"кичиги" n nom
+"<->"
+	"-" guio
+"<тахтын>"
+	"тахт" n gen
+	"тахт" n px2sg nom
+	"тахт" n px3sg nom
+	"тахт" n px3pl nom
+"<булду>"
+	"бул" v tv past p3 pl
+	"бул" v tv past p3 sg
+"<,>"
+	"," cm
+
+"<башына>"
+	"баш" n px3sg dat
+	"баш" n px3pl dat
+"<пуллар>"
+	"пул" n pl nom
+"<кийдирди>"
+	"кийдир" v iv past p3 pl
+	"кийдир" v iv past p3 sg
+"<.>"
+	"." sent
+
+"<Не>"
+	"не" prn det dem
+"<ахыллы>"
+	"ахыллы" adj
+	"ахыллы" adj subst
+"<халх>"
+	"халх" n nom
+"<эдилер>"
+	"э" v tv past p3 pl
+"<,>"
+	"," cm
+
+"<кӧктэн>"
+	"кӧк" n abl
+"<,>"
+	"," cm
+"<йылдыздан>"
+	"йылдыз" n abl
+"<бильдилер>"
+	"биль" v tv past p3 pl
+	"биль" v iv past p3 pl
+"<,>"
+	"," cm
+
+"<мирон>"
+	"мирон" n nom
+"<,>"
+	"," cm
+"<алтын>"
+	"алтын" n nom
+"<тʼетирдилер>"
+	"тʼетир" v tv past p3 pl
+"<,>"
+	"," cm
+"<хозу>"
+	"хоз" n acc
+"<бағыш>"
+	"бағыш" n nom
+"<тʼетирдилер>"
+	"тʼетир" v tv past p3 pl
+"<.>"
+	"." sent
+
+"<Ирод>"
+	"Ирод" np ant m sg nom
+"<падышах>"
+	"падышах" n nom
+"<ишитти>"
+	"ишит" v iv past p3 pl
+	"ишит" v iv past p3 sg
+"<,>"
+	"," cm
+"<астʼер>"
+	"астʼер" n nom
+"<алып>"
+	"*алып"
+"<йола>"
+	"йол" n dat
+"<чыхты>"
+	"чых" v iv past p3 pl
+	"чых" v iv past p3 sg
+"<,>"
+	"," cm
+"<йӱз>"
+	"йӱз" num
+	"йӱз" n nom
+"<он>"
+	"он" num
+"<дӧрт>"
+	"дӧрт" num
+"<бин>"
+	"бин" num
+"<бала>"
+	"бал" n dat
+	"бала" n nom
+"<хырды>"
+	"хыр" v tv past p3 pl
+	"хыр" v tv past p3 sg
+"<,>"
+	"," cm
+"<Христозу>"
+	"Христос" np ant m sg acc
+"<да>"
+	"да" part
+"<буламады>"
+	"була" v tv neg past p3 pl
+	"була" v tv neg past p3 sg
+"<.>"
+	"." sent
+
+"<Аллах>"
+	"аллах" n nom
+"<оғлуну>"
+	"оғул" n px2sg acc
+	"оғул" n px3sg acc
+	"оғул" n px3pl acc
+"<сахлады>"
+	"сахла" v iv past p3 pl
+	"сахла" v iv past p3 sg
+"<,>"
+	"," cm
+
+"<Ироднуң>"
+	"Ирод" np ant m sg px2sg gen
+"<йолун>"
+	"йол" n gen
+	"йол" n px2sg nom
+	"йол" n px3sg nom
+	"йол" n px3pl nom
+"<бағлады>"
+	"бағла" v tv past p3 pl
+	"бағла" v tv past p3 sg
+"<.>"
+	"." sent
+
+"<Христос>"
+	"Христос" np ant m sg nom
+"<тʼетти>"
+	"тʼет" v iv past p3 pl
+	"тʼет" v iv past p3 sg
+"<Йегипитке>"
+	"Йегипит" np top sg dat
+"<,>"
+	"," cm
+"<онда>"
+	"онда" adv
+"<ӧстӱ>"
+	"*ӧстӱ"
+"<,>"
+	"," cm
+"<бӱмӱк>"
+	"*бӱмӱк"
+"<олду>"
+	"ол" v iv past p3 pl
+	"ол" v iv past p3 sg
+	"олду" unk
+"<,>"
+	"," cm
+"<җеннет>"
+	"җеннет" n nom
+"<хапӱсӱн>"
+	"хапӱсӱн" n nom
+"<ачтырды>"
+	"ачтыр" v iv past p3 pl
+	"ачтыр" v iv past p3 sg
+"<,>"
+	"," cm
+"<халхны>"
+	"халхн" n acc
+"<йӱнахтан>"
+	"йӱнах" n abl
+"<хутхарды>"
+	"хутхар" v tv past p3 pl
+	"хутхар" v tv past p3 sg
+"<..>"
+	".." sent
+
+

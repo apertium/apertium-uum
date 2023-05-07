@@ -1,0 +1,8 @@
+DATE: 03-28-2023
+
+python3 ../tools/precisionRecall.py ../ling073-uum-corpus/uum.eval.test.txt ../ling073-uum-corpus/uum.eval.gold.txt 
+
+Totals: 137 forms, 106 tp, 31 fp, 0 tn, 106 fn
+Precision: 77.37226%
+Recall: 50.00000%
+

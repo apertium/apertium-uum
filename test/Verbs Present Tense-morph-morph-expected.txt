@@ -1,0 +1,22 @@
+[1yKtjKuAas78#0] ^кӧрӱйсӱнӱз/кӧр<v><tv><pres><p2><pl>$
+[/1yKtjKuAas78]
+[Be0CbPVT9FDe#0] ^отруйсунуз/отур<v><iv><pres><p2><pl>$
+[/Be0CbPVT9FDe]
+[H0ZypKxmSRTJ#0] ^сӧлейик/сӧле<v><iv><pres><p1><pl>$
+[/H0ZypKxmSRTJ]
+[PIB0X7Taneua#0] ^сӧлей/сӧле<v><iv><pres><p3><pl>/сӧле<v><iv><pres><p3><sg>$
+[/PIB0X7Taneua]
+[R-Zu30Xmtz5h#0] ^кӧрӱйсӱн/кӧр<v><tv><pres><p2><sg>$
+[/R-Zu30Xmtz5h]
+[WKJjA7zORDir#0] ^отруйум/отур<v><iv><pres><p1><sg>$
+[/WKJjA7zORDir]
+[b9ILjOHAN9As#0] ^сӧлейим/сӧле<v><iv><pres><p1><sg>$
+[/b9ILjOHAN9As]
+[g8VvF51oh7Na#0] ^сӧлейлер/сӧле<v><iv><pres><p3><pl>$
+[/g8VvF51oh7Na]
+[jddkAd0_1tpH#0] ^алыйлар/ал<v><tv><pres><p3><pl>$
+[/jddkAd0_1tpH]
+[lWL-QVi1ozTu#0] ^алыйсын/ал<v><tv><pres><p2><sg>$
+[/lWL-QVi1ozTu]
+[oRy0N3zxBX2C#0] ^алыйых/*алыйых$
+[/oRy0N3zxBX2C]

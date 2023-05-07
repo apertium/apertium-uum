@@ -1,0 +1,725 @@
+# Use the following command to see if forms are generating correctly:
+# echo "^тʼеди<n><gen>$" | apertium -f none -d . uum-gener
+#
+# Use the following command to see if forms are analyzing correctly:
+# echo "тʼединин" | apertium -d . uum-morph
+#
+# The following command just checks if something exists as a mapping:
+# hfst-expand -c0 uum.automorf.hfst | grep 'тʼединин:тʼеди<n><gen>'
+#
+# GOLD MATCHING is anything that has output exactly match the input, i.e,
+# if more than one correct forms exist of a particular item, then it will
+# not generate correctly.
+#
+# EX:
+#       echo "тʼединин" | apertium -d . uum-morph
+#       тʼединин/тʼеди<n><gen>/тʼеди<n><px2sg><gen>$^./.<sent>$
+#
+# We NEED to make sure that we update our gold on the web-portal (?) :)
+
+# Morphological Transducer for Urum
+
+# Part of speech categories
+# <n>      # Noun
+# <v>      # Verb
+# <prn>    # Pronoun
+# <adj>    # Adjective
+# <adv>    # Adverb
+# <abbr>   # Abbreviation
+# <num>    # Numeral
+# <conj>   # Conjunction
+# <pr>     # Preposition
+
+# <pres>   # Present-tense
+# <past>   # Past-tense
+
+# <neg>    # Verb negation
+
+# <iv>     # Intransitive-verb
+# <tv>     # Transitive-verb
+
+# <p1>     # First-person
+# <p2>     # Second-person
+# <p3>     # Third-person
+
+# <px1sg>  # First-person singular possesive 
+# <px2sg>  # Second-person singular possesive 
+# <px3sg>  # Third-person singular possesive 
+
+# <px1pl>  # First-person plural possesive 
+# <px2pl>  # Second-person plural possesive 
+# <px3pl>  # Third-person plural possesive 
+
+# <acc>    # Accusative case
+# <dat>    # Dative case
+# <loc>    # Locative case
+# <gen>    # Genitive case
+# <abl>    # Ablative case
+# <ins>    # Instrumental case
+# <abe>    # Abessive case
+# <term>   # Terminative case
+
+# <ord>    # Ordinal
+# <dis>    # Distributive
+
+# <intj>   # Interjection
+# <part>   # Particle
+
+# <sent>   # Sentence-ending punctuation
+# <guio>   # Hyphen
+# <cm>     # Comma
+# <apos>   # Apostrophe
+# <quot>   # Quotation mark
+# <lquot>  # Left quotation mark
+# <rquot>  # Right quotation mark
+# <lpar>   # Left parenthesis
+# <rpar>   # Right parenthesis
+
+# Number morphology
+# <pl>     # Plural
+# <sg>     # Singular
+
+# Other symbols
+# >        # Morpheme boundary
+
+###############################################################################
+###                       M O R P H O T A C T I C S                         ###
+###############################################################################
+
+PATTERNS
+Nouns
+Adjectives
+Verbs
+Adverbs
+Conjunctions
+Determiners
+Prepositions
+Particles
+Interjections
+Pronouns
+UNKNOWN [<unk>:]
+Abbreviations
+Numerals
+Punctuation
+PropNouns
+
+PATTERN Adjectives
+Adj-Root [ <adj>: ]
+Adj-Root [ <adj><subst>: ]
+
+PATTERN Adverbs
+Adv-Root [ <adv>: ]
+
+PATTERN Conjunctions
+Conj-Root [ <conj>: ]
+
+PATTERN Prepositions
+Prep-Root [ <pr>: ]
+
+PATTERN Particles
+Part-Root [ <part>: ]
+
+PATTERN Determiners
+Det-Root [ <det>: ]
+
+PATTERN Interjections
+Intj-Root [ <intj>: ]
+
+PATTERN Numerals
+Num-Root [ <num>: ]
+Num-Root [ <num>: ] Num-types
+
+PATTERN Abbreviations
+Abbr-Root [ <abbr>: ]
+
+PATTERN Pronouns
+(Prn-Root [ <prn>: ] MetaTag)[^[dem]]
+
+PATTERN PropNouns
+PropN-Root(1) [ <np>: ] PropN-Root(2) Plurality? Possession? Cases 
+
+LEXICON MetaTag
+<det><dem>:[dem]
+<pers><p3><sg><nom>:[nonDem]
+
+###############
+#    VERBS    #
+###############
+
+PATTERN Verbs
+(V-Root [<v>:] TransitivityTag)[^[tv,iv]] Negation? VPres
+(V-Root [<v>:] TransitivityTag)[^[tv,iv]] Negation? VPresCond
+(V-Root [<v>:] TransitivityTag)[^[tv,iv]] Negation? VPast
+(V-Root [<v>:] TransitivityTag)[^[tv,iv]] Negation? VImp
+(V-Root [<v>:] TransitivityTag)[^[tv,iv]] VInf
+# new stuff
+(V-Root [<v>:] TransitivityTag)[^[tv,iv]] VFutIndef
+(V-Root [<v>:] TransitivityTag)[^[tv,iv]] VFutDef
+(V-Root [<v>:] TransitivityTag)[^[tv,iv]] VTransgressive
+(V-Root [<v>:] TransitivityTag)[^[tv,iv]] VPP
+
+LEXICON TransitivityTag
+<iv>:[iv]
+<tv>:[tv]
+
+LEXICON Negation
+<neg>:>м{A}
+
+LEXICON VTransgressive
+<tsg>:>{й}{I}п
+
+LEXICON VPP
+<pp>:>{й}{A}н
+
+LEXICON VFutIndef
+<fut><p1><sg>:>{i}р{I}м
+<fut><p1><pl>:>{i}р{I}{к}
+<fut><p2><sg>:>{i}рc{I}н
+<fut><p2><pl>:>{i}рс{I}н{I}з
+<fut><p3><sg>:>{i}р
+<fut><p3><pl>:>{i}л{A}р
+
+LEXICON VFutDef
+<fdi><p1><sg>:>{a}йдж{A}м
+<fdi><p1><pl>:>{a}йдж{A}{г}{I}з 
+<fdi><p2><sg>:>{a}йдж{A}н
+<fdi><p2><pl>:>{a}йдж{A}{г}н{I}з 
+<fdi><p3><sg>:>{a}йдж{A}{к}
+<fdi><p3><pl>:>{a}йдж{A}{к}{Л}{A}р 
+
+LEXICON VPres
+<pres><p1><sg>:>{i}й{I}м
+<pres><p1><pl>:>{i}й{I}{к}
+<pres><p2><sg>:>{i}йс{I}н
+<pres><p2><pl>:>{i}йс{I}н{I}з
+<pres><p3><sg>:>{i}й
+<pres><p3><pl>:>{i}йл{A}р #
+<pres><p3><pl>:>{i}й      # Dir/LR 
+
+LEXICON VPast
+<past><p1><sg>:>{д}{I}м
+<past><p1><pl>:>{д}{I}{к}
+<past><p2><sg>:>{д}{I}н
+<past><p2><pl>:>{д}{I}н{I}з
+<past><p3><sg>:>{д}{I}
+<past><p3><pl>:>{д}{I}л{A}р #
+<past><p3><pl>:>{д}{I}      # Dir/LR 
+
+LEXICON VPresCond
+<pres><cni><p1><sg>:>с{A}м
+<pres><cni><p1><pl>:>с{A}х
+<pres><cni><p2><sg>:>с{A}н
+<pres><cni><p2><pl>:>с{A}н{I}з
+<pres><cni><p3><sg>:>с{A}
+<pres><cni><p3><pl>:>с{A}л{A}р
+
+LEXICON VImp
+<imp><p1><sg>:>
+<imp><p1><pl>:>н{I}з
+<imp><p2><sg>:>
+<imp><p2><pl>:>н{I}з
+
+LEXICON VInf
+<inf>:>м{A}й{A}
+
+# LEXICON VConditional
+# See the screenshot on Telegram, lol
+
+###############
+#    NOUNS    #
+###############
+
+PATTERN Nouns
+N-Root [ <n>: ] Plurality? Possession? Cases 
+#N-Root [<n>:]
+
+LEXICON Possession
+# when used with Locative Case, the Posession suffixes starting 
+# at a vowel can have this vowel dropped 
+<px1sg>:>{i}м
+<px2sg>:>{i}н
+<px3sg>:>{c}{I}{н}
+<px1pl>:>м{I}з
+<px2pl>:>н{I}з
+<px3pl>:>{c}{I}{н}
+
+LEXICON Cases
+<nom>:
+<acc>:>{й}{I}
+<dat>:>{й}{A}
+# destinations (to Egypt)
+<dat>:>к{A} # Dir/LR
+# д drops when possession in <loc>
+# if possession, we would use {A} instead of {Э} (?)
+<loc>:>{д}{Э}
+<loc>:>{д}ʼ{A} # Dir/LR
+<gen>:>{н}{I}н
+<gen>:>{н}{I}ң # Dir/LR
+<abl>:>{д}{Э}н
+<ins>:>{й}н{Э}н
+<abe>:>с{I}з
+<term>:>{i}йдж{I}з
+
+LEXICON Plurality
+<pl>:>{Л}{A}р
+<pl>:>{л}{A}р # Dir/LR
+<pl>:>л{A}р   # Dir/LR
+
+###############
+#    NOUNS    #
+###############
+
+LEXICON Num-types
+<ord>:>{i}ндж{I}
+<dis>:>{ш}{A}р
+
+###############################################################################
+###                          L E X I C O N                                  ###
+###############################################################################
+
+# Fix the appostraphes in all of the texts (wiki, keyboard, corpus, ...?)
+# Make sure to delete the plurality tags 
+# Nominative tag for plurality cases on the wiki
+# Delete the singular tag for words that are singular, keep plurality tag
+# Make sure we ACTUALLY understand the vowel harmony
+# Delete all of the files in /test and regenerate them after changing the wiki
+
+LEXICON N-Root
+айахташ:айахташ
+айакташ:айакташ
+абла:абла
+аға:аға
+адам:адам
+ай:ай
+аллах:аллах
+ах:ах
+ан:ан
+ана:ана
+ат:ат
+астʼер:астʼер
+алтын:алтын
+базар:базар
+бал:бал
+бала:бала
+бахчы:бахчы
+бағыш:бағыш
+башлавужу:башлавужу
+бӱльбӱль:бӱльбӱль
+бӱйӱгӱ:бӱйӱгӱ
+бешик:беши{к}
+вахт:вахт
+вахыт:вахыт # Dir/LR
+доғуш:доғуш
+дӱнйа:дӱнйа
+гӱль:гӱл{ь}
+гӧңӱль:гӧңӱл{ь}
+гӧнлӱм:гӧнлӱм
+завот:завот
+ич:ич
+игит:игит
+йер:йер
+йол:йол
+йӱз:йӱз
+йутайых:йутайых
+йыл:йыл
+йырла:йырла
+йундуз:йундуз
+йӱнах:йӱнах
+кӧй:кӧй
+кӧз:кӧз
+кӧк:кӧк
+кӧпек:кӧпек
+кӱн:кӱн
+кӱн\ доғуш:кӱн\ доғуш
+келиш:келиш
+кичиги:кичиги
+йылан:йылан
+иш:иш
+мелайик:мелайик
+мышых:мышых
+мирон:мирон
+мельэм:мельэм
+оғул:оғ{у}л
+от:от
+оҗа:оҗа
+ортанҗысы:ортанҗысы
+падышах:падышах # king
+пул:пул
+пычах:пычах
+саба:саба
+сон:сон
+су:су
+севда:севда
+сары:сары
+тахт:тахт
+тиш:тиш
+тʼеди:тʼеди
+хар:хар
+халх:халх
+халхн:халхн
+хапӱсӱн:хапӱсӱн
+хооншу:хооншу
+хурйух:хурйух
+хыз:хыз
+хоз:хоз
+шаэр:шаэр
+ший:ший
+эв:эв
+эль:эл{ь} # hand
+чӧль:чӧл{ь} # field
+чырайы:чырайы
+чобан:чобан
+махлук:махлук
+ан:ан # moment
+ахыз:ахыз # to appeal
+йылдыз:йылдыз # star
+кӧй:кӧй # village
+пичен:пичен # hay
+йасла:йасла # manger
+башлавужу:башлавужу # founder
+баш:баш # head
+ышхын:ышхын
+тӱрк:тӱрк # song
+учхун:учхун
+җан:җан
+җеннет:җеннет #heaven
+ава:ава
+ағыз:ағыз
+ад:ад
+азбар:азбар
+айах:айах
+айахташ:айахташ
+айван:айван
+амур:амур
+анабаба:анабаба
+афта:афта
+ахчы:ахчы
+ахшам:ахшам
+ахыл:ахыл
+ахыллых:ахыллых
+аш:аш
+базартеси:базартеси
+балта:балта
+балых:балых
+бардах:бардах
+барйам:барйам
+бары:бары
+бела:бела
+аскер:аскер
+
+LEXICON PropN-Root(2)
+Йосиф:Йосиф             <ant><m><sg>:
+Панайана:Панайана       <ant><f><sg>:
+Ирод:Ирод               <ant><m><sg>:
+Йегипит:Йегипит         <top><sg>:
+Христос:Христо{c}       <ant><m><sg>:
+Вифлейем:Вифлейем       <top><sg>:
+Алина:Алина             <ant><f><sg>:
+Саша:Саша               <ant><m><sg>:
+Джордж:Джордж           <ant><m><sg>:
+Джонатан:Джонатан       <ant><m><sg>:
+Вашингтон:Вашингтон     <cog><mf><sg>:
+Вашингтон:Вашингтон     <top><sg>:
+Михаил:Михаил           <ant><m><sg>:
+Айтхан:Айтхан           <cog><mf><sg>:
+җан:җан                 <ant><mf><sg>: # i am not sure what the tags are
+Ашых:Ашых               <ant><m><sg>: # Ashiq
+Ғариб:Ғариб             <cog><mf><sg>: # Qarib (Wandering)
+
+LEXICON Adj-Root
+гӱзель:гӱзель
+бӱйӱк:бӱйӱк
+харт:харт
+дэли:дэли
+хаста:хаста
+# Means hungry, however: ач does, not sure.
+ачның:ачның
+азиз:азиз # holy
+йарых:йарых # light
+тэна:тэна # peaceful
+ахыллы:ахыллы # wise
+ғарип:ғарип
+блашых:блашых
+аста:аста
+алхын:алхын
+
+LEXICON Prn-Root
+андаче:андаче[dem]
+абу:абу
+аблар:аблар
+бир:бир
+бун:бун[dem]
+алай:алай
+алаймыз:алаймыз
+сен:сен
+не:не
+мен:мен
+биз:биз
+ӧле:ӧле
+о:о[dem]
+о:о[non-dem]
+эр:эр
+нас:нас
+насын:насын
+
+LEXICON Adv-Root
+даа:даа
+бек:бек
+бош:бош 
+сора:сора
+онда:онда
+чох:чох
+йене:йене
+нас:нас
+насын:насын
+эм:эм # also
+нас:нас
+тʼи:тʼи                 # here/suddenly
+
+LEXICON Det-Root(2)
+бу:бу           <dem><sg>:
+
+
+LEXICON Conj-Root
+эбет:эбет
+ама:ама
+
+LEXICON Prep-Root
+илен:илен # with
+чине:чине # in, to <like locative>
+
+LEXICON Abbr-Root
+А:А #A
+В:В #B
+С:С #C
+Д:Д #D
+I:I #E
+Ф:Ф #F
+Г:Г #G
+K:K #K
+М:М #M
+П:П #P
+
+LEXICON Num-Root
+бир:бир # one
+этʼи:этʼи # two etc
+ӱч:ӱч
+дӧрт:дӧрт 
+беш:беш
+алты:алты
+йеди:йеди
+сетʼи:сетʼи
+дохуз:дохуз
+он:он # 10
+дʼирим:дʼирим # 20
+отуз:отуз # 30
+хырх:хырх # 40
+элли:элли # 50
+алтмыш:алтмыш # 60
+йетмиш:йетмиш # 70
+сексен:сексен # 80
+дохсан:дохсан # 90
+йӱз:йӱз # 100
+бин:бин # 1000
+
+LEXICON Part-Root
+э:дэ
+да:да
+йа:йа
+вар:вар
+йох:йох
+чаре:чаре
+лазым:лазым
+му:му
+лазымды:лазымды
+варды:варды
+лазым:лазым 
+йохтурду:йохтурду
+дӧгӱль:дӧгӱль
+а:а
+
+LEXICON Intj-Root
+эй:эй
+о:о
+штэ:штэ 
+ах:ах 
+
+LEXICON UNKNOWN
+ону:ону
+айтый:айтый # might be ай
+та:та
+анда:анда
+йох:йох
+она:она # он = 10?
+дер:дер
+иди:иди
+ки:ки
+де:де # ????
+ичӱн:ичӱн # added ?
+ем:ем
+этʼен:этʼен # "two" два
+эди:эди
+ао:ао
+ве:ве
+дэди:дэди # ди - to say
+бен:бен
+йа:йа
+аман:аман # ама - but, however
+тэ:тэ
+йох:йох
+олду:олду # maybe a form of "to be"
+тʼитий:тʼитий # тий - to wear
+сени:сени # might be a form of сен
+мы:мы
+маа:маа
+беле:беле # might be бела:бела - беда 
+олур:олур # sounds similar, but theres only  олар and ол 
+саа:саа  
+олан:олан # again, idk. ол - a verb. to be
+оса:оса
+сана:сана
+олсун:олсун
+осун:осун
+хадар:хадар
+йохтур:йохтур
+беним:беним
+я:я
+тʼерек:тʼерек # тʼере - раз
+ми:ми
+эдим:эдим
+тʼитти:тʼитти
+олуй:олуй
+меэм:меэм
+дӧгӱль:дӧгӱль
+ӧзӱ:ӧзӱ
+мында:мында
+дэр:дэр
+абу:абу
+лер:лер
+оон:оон
+
+LEXICON V-Root
+ди:ди[iv]               # to say
+эн:эн[iv]
+сар:сар[tv]
+ӧс:ӧс[iv]
+йелир:йелир[iv]
+эниш:эниш[iv]
+севин:севин[iv]
+кийдир:кийдир[iv]
+ишит:ишит[iv]
+ачтыр:ачтыр[iv]
+хутхар:хутхар[tv]
+сахла:сахла[iv]
+уруң:уруң[iv]
+кель:кел{ь}[iv]
+хонуш:хонуш[iv]
+хорхун:хорхун[iv]
+хон:хон[iv]
+йырла:йырла[iv]
+бағла:бағла[tv]
+кӧрӱн:кӧрӱн[iv]
+чайна:чайна[tv]
+улан:улан[iv]
+гырылда:гырылда[iv]
+ал:ал[tv]
+башла:башла[tv]
+бар:бар[iv]
+биль:биль[iv]
+билий:билий[iv]
+билир:билир[iv]
+блий:блий[iv]
+биль:бил{ь}[tv]
+бул:бул[tv]
+була:була[tv]
+вер:вер[tv]
+кӧр:кӧр[tv]
+отур:от{у}р[iv]
+ӧгрен:ӧгрен[iv]
+сӧле:сӧле[iv]
+шит:шит[tv]
+чых:чых[iv]
+тʼель:тʼель[iv]
+тʼетир:тʼетир[tv]
+тʼет:тʼет[iv]
+ол:ол[iv]
+дэ:дэ[iv] # to say
+вар:вар[iv] 
+йут:йут[tv]
+шоп:шоп[tv]
+йар:йар[tv]
+ал:ал[tv]
+хал:хал[iv]
+халдыр:халдыр[tv]
+ах:ах[iv]
+дӧг:дӧг[iv]
+вах:вах[iv]
+доғ:доғ[iv]
+э:э[tv]
+хон:хон[iv]
+хыр:хыр[tv]
+айт:айт[iv] # to speak
+хой:хой[tv]
+
+PATTERN Number
+Numeral+ [<num>:]
+
+LEXICON Numeral
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+#LEXICON Plurality
+#пычах<n><pl>:пычахлар
+#хыз<n><pl>:хызлар
+#хурйух<n><pl>:хурйухлар
+#от<n><pl>:отлар
+#эль<n><pl>:эллер
+#тиш<n><pl>:тишлер
+#кӧз<n><pl>:кӧзлер
+#гÿль<n><pl>:гÿллер
+
+
+LEXICON Punctuation
+
+.<sent>:.
+..<sent>:..
+...<sent>:...
+;<sent>:;
+\:<sent>:\:
+!<sent>:!
+-<guio>:-
+—<guio>:—
+,<cm>:,
+?<sent>:? 
+'<apos>:'
+"<quot>:"
+«<lquot>:«
+»<rquot>:»
+”<rquot>:”
+“<lquot>:“
+(<lpar>:(
+\]<rpar>:\]
+\[<lpar>:\[
+)<rpar>:)
+\\<sent>:\\
+\/<sent>:\/
+
+
+# Resources:
+# https://github.com/apertium/lexd/blob/master/Usage.md
+# https://wiki.apertium.org/wiki/List_of_symbols
+# https://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Lexicon
+# https://wiki.apertium.org/wiki/Lttoolbox_and_lexc
+# https://wiki.apertium.org/wiki/Apertium-specific_conventions_for_lexc
+# https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstHome
+# https://github.com/hfst/
+# https://wiki.apertium.org/wiki/Hfst
+

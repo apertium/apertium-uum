@@ -1,0 +1,202 @@
+ Alphabet
+ А Б В Г Ґ Ғ Д Е Ё Ж Җ З И Й К Л М Н Ң О Ӧ Θ П Р С Т У Ӱ Ф Х Ч Ш Щ Ь Ы і Ї Э Ц ʼ
+ а б в г ґ ғ д е ё ж җ з и й к л м н ң о ӧ θ п р с т у ӱ ф х ч ш щ ь ы І ї э ц 
+ %>:0
+
+ ! Vowel Harmonies
+ ! A is English
+ %{A%}:е %{A%}:а 
+ %{a%}:е %{a%}:а 
+ %{Э%}:э %{Э%}:а  
+ ! I/i is English
+ %{i%}:ы %{i%}:у %{i%}:и %{i%}:ӱ %{i%}:0 
+ %{I%}:ы %{I%}:у %{I%}:и %{I%}:ӱ 
+
+ ! Consonant Harmonies
+ %{ь%}:ь %{ь%}:0
+ %{й%}:й %{й%}:0
+ %{д%}:д %{д%}:т %{д%}:0 
+ %{Д%}:д %{Д%}:т
+ %{н%}:н %{н%}:0
+ %{у%}:у %{у%}:0
+ %{м%}:м %{м%}:0
+ ! C is english
+ %{c%}:с %{c%}:з %{c%}:0
+ %{з%}:с %{з%}:з
+ %{х%}:ғ %{х%}:х 
+ %{к%}:г %{к%}:к %{к%}:x
+ %{п%}:п %{п%}:б 
+ %{г%}:г %{г%}:ғ
+ %{ш%}:ш %{ш%}:0
+
+ ! Plural "nasal" harmony
+ %{Л%}:л %{Л%}:н
+ ! for words like чобан - чобаллара
+ %{л%}:л
+;
+
+Sets
+
+Consonant = Б В Г Ґ Ғ Д Ж З Й К Л М Н Ң П Р С Т Ф Θ Х Ч Ш Щ Ь Ц ʼ
+            б в г ґ ғ д ж з й к л м н ң п р с т ф θ х ч ш щ ь ц ; 
+
+Vowel = а е э і о ӧ у ӱ ы и
+        А Е Э І О Ӧ У Ӱ Ы И ;
+
+Low = А О У Ы
+      а о у ы ;
+
+High = Э И Ӧ Ӱ Е
+       э и ӧ ӱ е ;
+
+Rounded = О У Ӧ Ӱ
+          о у ӧ ӱ ;
+
+Unrounded = А Э Ы И Е
+            а э ы и е ;
+
+Voiced = Б В Д Ғ З Ж Г Ґ Й Л Ң Р А Е Э І О Ӧ У Ӱ Ы И М Н
+         б в д ғ з ж г ґ й л ң р а е э і о ӧ y ӱ ы и м н ;
+
+Unvoiced = С Т К П Ф Θ Х Ч Ш Щ Ц ʼ
+           с т к п ф θ х ч ш щ ц ;
+
+Nasal = М Н
+        м н ;
+
+Silent = Ь 
+         ь ; 
+
+! ------------ !
+
+Rules
+
+! Rules for First Case: {A} and {Э}
+
+"Vowel harmony for archiphoneme {A}"
+%{A%}:Vy => [ :LastVowel :Consonant* ]/:0* _ ;
+        where 
+            LastVowel in ( э и ӧ ӱ е Э И Ӧ Ӱ Е а о у ы А О У Ы )
+                   Vy in ( е е е е е е е е е е а а а а а а а а )  
+            
+            matched;
+
+"{Э} maps to 'э' after a high vowel"
+%{Э%}:э <=> [ :High :Consonant* ]/:0*  _ ;
+
+"Vowel harmony for sub-archiphoneme {a}"
+%{a%}:Vy => [ :LastVowel :Consonant* :Consonant ]/[ :0 - %{a%}: ]* _ ;
+        where 
+            LastVowel in ( а ы А Ы о у О У э и е Э И Е ӧ ӱ Ӧ Ӱ )
+                   Vy in ( а а а а а а а а е е е е е е е е е е )  
+            matched;
+
+"Additional vowel harmony case for sub-archiphoneme {a} -> 0"
+%{a%}:0 <=> [ :Vowel ] %>: _ ;
+            [ [ :Vowel - %{у%}: ] :Consonant ]/:0* _ [ :Consonant :Vowel ]/:0* ;
+
+! ------------ !
+
+! Rules for Second Case: {i} and {I}
+
+"Vowel harmony for archiphoneme {I}"
+%{I%}:Vy => [ :LastVowel :Consonant* ]/:0* _ ;
+        where 
+            LastVowel in ( а ы А Ы о у О У э и е Э И Е ӧ ӱ Ӧ Ӱ )
+                   Vy in ( ы ы ы ы у у у у и и и и и и ӱ ӱ ӱ ӱ )  
+            matched;
+
+"Vowel harmony for sub-archiphoneme {i}"
+
+%{i%}:Vy => [ :LastVowel :Consonant* :Consonant ]/[ :0 - %{i%}: ]* _ ;
+        where 
+            LastVowel in ( а ы А Ы о у О У э и е Э И Е ӧ ӱ Ӧ Ӱ )
+                   Vy in ( ы ы ы ы у у у у и и и и и и ӱ ӱ ӱ ӱ )  
+            matched;
+
+"Additional vowel harmony case for sub-archiphoneme {i} -> 0"
+%{i%}:0 <=> [ :Vowel ] %>: _ ;
+            [ [ :Vowel - %{у%}: ] :Consonant ]/:0* _ [ :Consonant :Vowel ]/:0* ;
+
+ 
+!@ х:х о:о о:о н:н ш:ш у:у >:0 {i}:0 м:м >:0 {н}:0 {I}:у н:н
+!@ э:э в:в >:0 {н}:0 {I}:и н:н
+
+!@ э:э в:в >:0 {i}:0 м:м >:0 {A}:е
+!@ о:о т:т {у}:0 р:р >:0 {i}:у й:й {I}:у м:м
+!@ о:о т:т {у}:у р:р >:0 {д}:д {I}:у м:м
+
+! ------------ !
+
+! Other Rules
+
+! ISSUE: This is the same issue as below.
+"{ь} maps to 0 before consonant"
+%{ь%}:0 => _ :Consonant* ;
+
+"If lemma ends at м, н, then {Л} -> н"
+%{Л%}:н <=> :Rounded [ м: | н: ] %>: _ ;
+
+"н realizes as 'л' when preceding %{л%}"
+н:л <=> _ %>: %{л%}:л ;
+
+"к, х, п change to  г, ғ, б before a vowel-starting suffix"
+! not before тӱркӱ:тӱрк<n><acc>
+Cx:Cy <=> _ >: :0* :Unrounded ;
+     where 
+         Cx in ( к х п )
+         Cy in ( г ғ б )
+        matched;
+
+"{г} realizes as ғ when before а"
+%{г%}:ғ <=> :а _ ;
+
+"{г} realizes as г before е"
+%{г%}:г <=> :е _ ;
+
+"{ш} realizes as 0 before consonant"
+%{ш%}:0 <=> :Consonant %>: _ ;
+
+"{k} realizes as x after y or ы"
+%{к%}:х <=> [ :у | :ы ] :0* _ ;
+
+"{k} realizes as k in other cases"
+%{к%}:к <=> [ :а | :и | :е | :э ] :0* _ ;
+
+"{у} gets realized as 0 when a suffix starting with a vowel is added otru"
+%{у%}:0 <=> _ [ :Consonant :Vowel ]/:0* ;
+
+! rules for possession + locative
+"{c} gets realized when after a vowel"
+%{c%}:c => [ :Vowel ] %>: _ ;
+
+"{й} gets realized as 'й' when preceding vowel"
+%{й%}:й <=> [ :Vowel ] %>: _ ;
+
+"{й} gets realized as '0' when preceding consonant"
+%{й%}:0 <=> [ :Consonant ] %>: _ ;
+
+"{д} gets realized as 'д' when preceding voiced"
+%{д%}:д <=> [ :Voiced :Silent* ] %>: _ ;
+
+"{д} gets realized as 'т' when preceding unvoiced"
+%{д%}:т <=> [ :Unvoiced ] %>: _ ;
+
+"{з} gets realized as 'з' when preceding a vowel"
+%{з%}:з => _ %>: :Vowel ;
+
+"{д} gets realized as '0' when following this environment"
+%{д%}:0 <=> %{i%}: [ м: | н: | %{н%}: ] %>: _ ;
+
+"{н}:0 in when following a nasal"
+%{н%}:0 <=> :Consonant %>: _ ;
+
+! TO DO: "High vowel realizes as  0 if before Consonant and Vowel"
+! High:0 <=> _ :Consonant :Vowel ;
+
+! Resources:
+! https://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Enter_twol
+! https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstHome
+! https://github.com/hfst/
+! https://wiki.apertium.org/wiki/Twol
+! https://wiki.apertium.org/wiki/Hfst

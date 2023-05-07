@@ -1,0 +1,91 @@
+# Firstly, we need to define what tags should be considered sentence delimiters. For this example, only full stop is set as delimiter.
+DELIMITERS = "<.>" ;
+
+# We can define sets for common tag clusters
+# LIST Case = (n s) (n p) ; # A set that matches either a Noun Singular or a Noun Plural
+
+LIST N = n;
+LIST V = v;
+LIST Prn = prn;
+LIST Adj = adj;
+LIST Adv = adv;
+LIST Num = num;
+LIST Conj = conj;
+LIST Part = part;
+LIST Intj = intj;
+LIST DetDem = (det dem);
+LIST PrnP3 = (pers p3 sg nom);
+
+LIST Pres = pres;
+LIST Past = past;
+
+LIST Neg = neg;
+
+LIST IV = iv;
+LIST TV = tv;
+
+LIST P1 = p1;
+LIST P2 = p2;
+LIST P3 = p3;
+
+LIST Px1sg = px1sg;
+LIST Px2sg = px2sg;
+LIST Px3sg = px3sg;
+
+LIST Px1pl = px1pr;
+LIST Px2pl = px2pr;
+LIST Px3pl = px3pr;
+
+LIST Acc = acc;
+LIST Dat = dat;
+LIST Loc = loc;
+LIST Gen = gen;
+LIST Abl = abl;
+
+LIST Sg = sg;
+LIST Pl = pl;
+
+SECTION
+
+SELECT Prn IF
+    (0 Part)
+    (1 Adj)
+    (1 V) ;
+
+SELECT Intj IF
+    (0 Prn)
+    (1 N) ;
+
+SELECT Px3sg IF
+    (0 N)
+    (1 Sg) ;
+
+# Fixed, will have to edit PrnP3 (1* V)
+
+SELECT PrnP3 IF
+    (0 Intj)
+    (0 DetDem)
+    (1 Part) ;
+
+SELECT DetDem IF
+    (0 PrnP3)
+    (0 Intj)
+    (1* N) ;
+
+"<бала>" REMOVE Dat IF 
+        (-1 Num);
+
+SELECT Num IF
+	((0 Num) OR (-1 Num))
+	((1 N) or (1 Num)) 
+	(NOT -1 Adj) ;
+
+# GitHub Link: 
+# https://wikis.swarthmore.edu/ling073/Urum/Disambiguation
+
+# Resources:
+# http://visl.sdu.dk/cg3.html
+# http://groups.google.com/group/constraint-grammar
+# http://kevindonnelly.org.uk/2010/05/constraint-grammar-tutorial/
+# https://wiki.apertium.org/wiki/Constraint_Grammar
+# https://wiki.apertium.org/wiki/Apertium_and_Constraint_Grammar

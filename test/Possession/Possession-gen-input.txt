@@ -1,0 +1,7 @@
+^йӱз<n><px1sg><nom>$
+^абла<n><px2sg><nom>$
+^ана<n><px3sg><nom>$
+^базар<n><px1pl><nom>$
+^мышых<n><px2pl><nom>$
+^копег<n><px3pl><nom>$
+^ана<n><pl><px1pl><nom>$

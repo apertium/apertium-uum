@@ -1,0 +1,8 @@
+prefix=@prefix@
+exec_prefix=${prefix}
+srcdir=@datarootdir@/apertium/apertium-uum
+
+Name: apertium-uum
+Description: Finite-state morphological transducer and constraint grammar for Urum
+Version: @VERSION@
+

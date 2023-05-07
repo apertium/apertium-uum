@@ -1,0 +1,4 @@
+^кӧр<v><tv><neg><pres><p1><sg>$
+^биль<v><tv><neg><pres><p3><pl>$
+^ӧгрен<v><iv><neg><pres><p1><pl>$
+^шит<v><tv><neg><pres><p3><sg>$
