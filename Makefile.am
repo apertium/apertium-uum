@@ -136,8 +136,8 @@ $(LANG1).zhfst: .deps/acceptor.default.hfst .deps/errmodel.default.hfst speller/
 ## Unigram tagger
 ###############################################################################
 
-#$(LANG1).prob: corpus/$(LANG1).tagged
-#	apertium-tagger -s 0 -u 2 $@ $<
+$(LANG1).prob: corpus/$(LANG1).tagged
+	apertium-tagger -s 0 -u 2 $@ $<
 
 ###############################################################################
 ## Distribution
