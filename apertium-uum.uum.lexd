@@ -180,12 +180,12 @@ LEXICON VFutIndef
 <fut><p3><pl>:>{i}л{A}р
 
 LEXICON VFutDef
-<fdi><p1><sg>:>{a}йдж{A}м
-<fdi><p1><pl>:>{a}йдж{A}{г}{I}з 
-<fdi><p2><sg>:>{a}йдж{A}н
-<fdi><p2><pl>:>{a}йдж{A}{г}н{I}з 
-<fdi><p3><sg>:>{a}йдж{A}{к}
-<fdi><p3><pl>:>{a}йдж{A}{к}{Л}{A}р 
+<fdi><p1><sg>:>{Е}дж{A}м
+<fdi><p1><pl>:>{Е}дж{A}{г}{I}з 
+<fdi><p2><sg>:>{Е}дж{A}н
+<fdi><p2><pl>:>{Е}дж{A}{г}н{I}з 
+<fdi><p3><sg>:>{Е}дж{A}{к}
+<fdi><p3><pl>:>{Е}дж{A}{к}{Л}{A}р 
 
 LEXICON VPres
 <pres><p1><sg>:>{i}й{I}м
@@ -636,6 +636,7 @@ LEXICON V-Root
 вер:вер[tv]
 кӧр:кӧр[tv]
 отур:от{у}р[iv]
+отур:отур[iv] # Dir/LR
 ӧгрен:ӧгрен[iv]
 сӧле:сӧле[iv]
 шит:шит[tv]

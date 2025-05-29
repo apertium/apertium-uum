@@ -5,8 +5,9 @@
 
  ! Vowel Harmonies
  ! A is English
- %{A%}:е %{A%}:а 
- %{a%}:е %{a%}:а 
+ %{A%}:е %{A%}:а
+ %{a%}:е %{a%}:а
+ %{Е%}:й %{Е%}:а %{Е%}:е
  %{Э%}:э %{Э%}:а  
  ! I/i is English
  %{i%}:ы %{i%}:у %{i%}:и %{i%}:ӱ %{i%}:0 
@@ -94,6 +95,18 @@ Rules
 "Additional vowel harmony case for sub-archiphoneme {a} -> 0"
 %{a%}:0 <=> [ :Vowel ] %>: _ ;
             [ [ :Vowel - %{у%}: ] :Consonant ]/:0* _ [ :Consonant :Vowel ]/:0* ;
+
+"Vowel harmony for sub-archiphoneme {Е}"
+%{Е%}:Vy => [ :LastVowel :Consonant* :Consonant ]/[ :0 - %{Е%}: ]* _ ;
+        where 
+            LastVowel in ( а ы А Ы о у О У э и е Э И Е ӧ ӱ Ӧ Ӱ )
+                   Vy in ( а а а а а а а а е е е е е е е е е е )  
+            matched;
+
+"Additional vowel harmony case for sub-archiphoneme {Е} -> й"
+%{Е%}:й <=> [ :Vowel ] %>: _ ;
+            [ [ :Vowel - %{у%}: ] :Consonant ]/:0* _ [ :Consonant :Vowel ]/:0* ;
+
 
 ! ------------ !
 
