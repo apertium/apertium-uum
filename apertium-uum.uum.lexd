@@ -155,8 +155,8 @@ PATTERN Verbs
 # new stuff
 (V-Root [<v>:] TransitivityTag)[^[tv,iv]] VFutIndef
 (V-Root [<v>:] TransitivityTag)[^[tv,iv]] VFutDef
-(V-Root [<v>:] TransitivityTag)[^[tv,iv]] VTransgressive
-(V-Root [<v>:] TransitivityTag)[^[tv,iv]] VPP
+(V-Root [<v>:] TransitivityTag)[^[tv,iv]] Negation? VTransgressive
+(V-Root [<v>:] TransitivityTag)[^[tv,iv]] Negation? VPP
 
 LEXICON TransitivityTag
 <iv>:[iv]
@@ -165,10 +165,10 @@ LEXICON TransitivityTag
 LEXICON Negation
 <neg>:>м{A}
 
-LEXICON VTransgressive
+LEXICON VTransgressive # дієприслівник
 <tsg>:>{й}{I}п
 
-LEXICON VPP
+LEXICON VPP # дієприкметник
 <pp>:>{й}{A}н
 
 LEXICON VFutIndef
