@@ -253,6 +253,7 @@ LEXICON Cases
 # if possession, we would use {A} instead of {Э} (?)
 <loc>:>{д}{Э}
 <loc>:>{д}ʼ{A} # Dir/LR
+<loc>:>че # Dir/LR
 <gen>:>{н}{I}н
 <gen>:>{н}{I}ң # Dir/LR
 <abl>:>{д}{Э}н

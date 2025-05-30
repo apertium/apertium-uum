@@ -82,7 +82,7 @@ Rules
             
             matched;
 
-"{Э} maps to 'э' after a high vowel"
+"{Э} maps to 'э' after a front vowel"
 %{Э%}:э <=> [ :High :Consonant* ]/:0*  _ ;
 
 "Vowel harmony for sub-archiphoneme {a}"
@@ -131,7 +131,7 @@ Rules
 %{i%}:0 <=> [ :Vowel ] %>: _ ;
             [ [ :Vowel - %{у%}: ] :Consonant ]/:0* _ [ :Consonant :Vowel ]/:0* ;
 
- 
+!@ а л т ы н >:0 {i}:ы м >:0 {д}:0 {Э}:а  
 !@ х:х о:о о:о н:н ш:ш у:у >:0 {i}:0 м:м >:0 {н}:0 {I}:у н:н
 !@ э:э в:в >:0 {н}:0 {I}:и н:н
 
@@ -191,6 +191,8 @@ Cx:Cy <=> _ >: :0* :Unrounded ;
 
 "{д} gets realized as 'д' when preceding voiced"
 %{д%}:д <=> [ :Voiced :Silent* ] %>: _ ;
+        except
+            %{i%}: [ м: | н: | %{н%}: ] %>: _ ;
 
 "{д} gets realized as 'т' when preceding unvoiced"
 %{д%}:т <=> [ :Unvoiced ] %>: _ ;
