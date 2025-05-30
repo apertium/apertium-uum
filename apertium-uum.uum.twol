@@ -6,7 +6,7 @@
  ! Vowel Harmonies
  ! A is English
  %{A%}:е %{A%}:а
- %{a%}:е %{a%}:а
+ %{a%}:е %{a%}:а %{a%}:0
  %{Е%}:й %{Е%}:а %{Е%}:е
  %{Э%}:э %{Э%}:а  
  ! I/i is English
@@ -22,7 +22,7 @@
  %{у%}:у %{у%}:0
  %{м%}:м %{м%}:0
  ! C is english
- %{c%}:с %{c%}:з %{c%}:0
+ %{c%}:с %{c%}:0 ! %{c%}:з
  %{з%}:с %{з%}:з
  %{х%}:ғ %{х%}:х 
  %{к%}:г %{к%}:к %{к%}:x
@@ -119,8 +119,10 @@ Rules
                    Vy in ( ы ы ы ы у у у у и и и и и и ӱ ӱ ӱ ӱ )  
             matched;
 
-"Vowel harmony for sub-archiphoneme {i}"
+"Additional vowel harmony case for sub-archiphoneme {I} -> 0"
+%{I%}:0 <=> %>: %{c%}: _ %{н%}: %>: %{й%}: %{I%}: ;
 
+"Vowel harmony for sub-archiphoneme {i}"
 %{i%}:Vy => [ :LastVowel :Consonant* :Consonant ]/[ :0 - %{i%}: ]* _ ;
         where 
             LastVowel in ( а ы А Ы о у О У э и е Э И Е ӧ ӱ Ӧ Ӱ )
@@ -131,6 +133,7 @@ Rules
 %{i%}:0 <=> [ :Vowel ] %>: _ ;
             [ [ :Vowel - %{у%}: ] :Consonant ]/:0* _ [ :Consonant :Vowel ]/:0* ;
 
+!@ с а б а >:0 {c}:с {I}:ы {н}:н >:0 {д}:д {Э}:а
 !@ а л т ы н >:0 {i}:ы м >:0 {д}:0 {Э}:а  
 !@ х:х о:о о:о н:н ш:ш у:у >:0 {i}:0 м:м >:0 {н}:0 {I}:у н:н
 !@ э:э в:в >:0 {н}:0 {I}:и н:н
@@ -181,7 +184,7 @@ Cx:Cy <=> _ >: :0* :Unrounded ;
 
 ! rules for possession + locative
 "{c} gets realized when after a vowel"
-%{c%}:c => [ :Vowel ] %>: _ ;
+%{c%}:с => [ :Vowel ] %>: _ ;
 
 "{й} gets realized as 'й' when preceding vowel"
 %{й%}:й <=> [ :Vowel ] %>: _ ;
