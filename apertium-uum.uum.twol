@@ -184,7 +184,7 @@ Cx:Cy <=> _ >: :0* :Unrounded ;
 
 ! rules for possession + locative
 "{c} gets realized when after a vowel"
-%{c%}:с => [ :Vowel ] %>: _ ;
+%{c%}:с <=> :Vowel %>: _ ;
 
 "{й} gets realized as 'й' when preceding vowel"
 %{й%}:й <=> [ :Vowel ] %>: _ ;
