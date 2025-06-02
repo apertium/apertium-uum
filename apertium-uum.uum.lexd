@@ -568,7 +568,6 @@ LEXICON UNKNOWN
 йа:йа
 аман:аман # ама - but, however
 тэ:тэ
-йох:йох
 олду:олду # maybe a form of "to be"
 тʼитий:тʼитий # тий - to wear
 сени:сени # might be a form of сен
@@ -601,7 +600,7 @@ LEXICON UNKNOWN
 оон:оон
 
 LEXICON V-Root
-ди:ди[iv]               # to say
+ди:ди[iv] # to say
 эн:эн[iv]
 сар:сар[tv]
 ӧс:ӧс[iv]
@@ -659,11 +658,13 @@ LEXICON V-Root
 вах:вах[iv]
 доғ:доғ[iv]
 э:э[tv]
-уч:уч[iv] # "fly"
+уч:уч[iv] # to fly
 хон:хон[iv]
 хыр:хыр[tv]
 айт:айт[iv] # to speak
 хой:хой[tv]
+оху:оху[tv] # to read
+оху:оху[iv] # to read
 
 PATTERN Number
 Numeral+ [<num>:]
