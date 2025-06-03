@@ -154,7 +154,7 @@ PATTERN Verbs
 (V-Root [<v>:] TransitivityTag)[^[tv,iv]] VInf
 # new stuff
 (V-Root [<v>:] TransitivityTag)[^[tv,iv]] VFutIndef
-(V-Root [<v>:] TransitivityTag)[^[tv,iv]] VFutDef
+(V-Root [<v>:] TransitivityTag)[^[tv,iv]] Negation? VFutDef
 (V-Root [<v>:] TransitivityTag)[^[tv,iv]] Negation? VTransgressive
 (V-Root [<v>:] TransitivityTag)[^[tv,iv]] Negation? VPP
 
