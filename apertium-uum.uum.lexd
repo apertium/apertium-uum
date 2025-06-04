@@ -344,7 +344,7 @@ LEXICON N-Root
 от:от
 оҗа:оҗа
 ортанҗысы:ортанҗысы
-падышах:падышах # king
+падышах:падышах # "king"
 пул:пул
 пычах:пычах
 саба:саба
@@ -367,24 +367,24 @@ LEXICON N-Root
 шаэр:шаэр
 ший:ший
 эв:эв
-эль:эл{ь} # hand
-чӧль:чӧл{ь} # field
+эль:эл{ь} # "hand"
+чӧль:чӧл{ь} # "field"
 чырайы:чырайы
 чобан:чобан
 махлук:махлук
 ан:ан # moment
 ахыз:ахыз # to appeal
-йылдыз:йылдыз # star
-кӧй:кӧй # village
-пичен:пичен # hay
-йасла:йасла # manger
-башлавужу:башлавужу # founder
+йылдыз:йылдыз # "star"
+кӧй:кӧй # "village"
+пичен:пичен # "hay"
+йасла:йасла # "manger"
+башлавужу:башлавужу # "founder"
 баш:баш # head
 ышхын:ышхын
 тӱрк:тӱрк # song
 учхун:учхун
 җан:җан
-җеннет:җеннет #heaven
+җеннет:җеннет # "heaven"
 ава:ава
 ағыз:ағыз
 ад:ад
@@ -436,10 +436,10 @@ LEXICON Adj-Root
 хаста:хаста
 # Means hungry, however: ач does, not sure.
 ачның:ачның
-азиз:азиз # holy
-йарых:йарых # light
-тэна:тэна # peaceful
-ахыллы:ахыллы # wise
+азиз:азиз # "holy"
+йарых:йарых # "light"
+тэна:тэна # "peaceful"
+ахыллы:ахыллы # "wise"
 ғарип:ғарип
 блашых:блашых
 аста:аста
@@ -487,7 +487,7 @@ LEXICON Conj-Root
 ама:ама
 
 LEXICON Prep-Root
-илен:илен # with
+илен:илен # "with"
 чине:чине # in, to <like locative>
 
 LEXICON Abbr-Root
@@ -600,7 +600,8 @@ LEXICON UNKNOWN
 оон:оон
 
 LEXICON V-Root
-ди:ди[iv] # to say
+ди:ди[iv] # "say"
+дэ:дэ[iv] # "say"
 эн:эн[iv]
 сар:сар[tv]
 ӧс:ӧс[iv]
@@ -645,7 +646,6 @@ LEXICON V-Root
 тʼетир:тʼетир[tv]
 тʼет:тʼет[iv]
 ол:ол[iv]
-дэ:дэ[iv] # to say
 вар:вар[iv] 
 йут:йут[tv]
 шоп:шоп[tv]
@@ -658,13 +658,13 @@ LEXICON V-Root
 вах:вах[iv]
 доғ:доғ[iv]
 э:э[tv]
-уч:уч[iv] # to fly
+уч:уч[iv] # "fly"
 хон:хон[iv]
 хыр:хыр[tv]
-айт:айт[iv] # to speak
+айт:айт[iv] # "speak"
 хой:хой[tv]
-оху:оху[tv] # to read
-оху:оху[iv] # to read
+оху:оху[tv] # "read"
+оху:оху[iv] # "read"
 
 PATTERN Number
 Numeral+ [<num>:]
