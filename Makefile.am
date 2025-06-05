@@ -50,7 +50,7 @@ TARGETS_COMMON =			\
 	hfst-compose-intersect -1 .deps/$(LANG1).LR.lexd.hfst -2 .deps/$(LANG1).twol.hfst -o $@
 
 $(LANG1).autogen.hfst: .deps/$(LANG1).RL.hfst
-	hfst-fst2fst -O $< -o $@
+	hfst-minimise $< | hfst-fst2fst -O -o $@
 
 .deps/$(LANG1).spellrelax.hfst: $(BASENAME).$(LANG1).spellrelax .deps/.d
 	hfst-regexp2fst -S -o $@ $<
