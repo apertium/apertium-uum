@@ -120,7 +120,9 @@ Rules
             matched;
 
 "Additional vowel harmony case for sub-archiphoneme {I} -> 0"
-%{I%}:0 <=> %>: %{c%}: _ %{н%}: %>: %{й%}: %{I%}: ;
+%{I%}:0 <=> %>: %{c%}: _ %{н%}: %>: %{й%}: %{I%}: .#. ;
+            %>: %{c%}: _ %{н%}: %>: %{д%}: %{Э%}: .#. ;
+            %>: %{c%}: _ %{н%}: %>: %{й%}: %{A%}: .#. ;
 
 "Vowel harmony for sub-archiphoneme {i}"
 %{i%}:Vy => [ :LastVowel :Consonant* :Consonant ]/[ :0 - %{i%}: ]* _ ;
@@ -133,7 +135,7 @@ Rules
 %{i%}:0 <=> [ :Vowel ] %>: _ ;
             [ [ :Vowel - %{у%}: ] :Consonant ]/:0* _ [ :Consonant :Vowel ]/:0* ;
 
-!@ с а б а >:0 {c}:с {I}:ы {н}:н >:0 {д}:д {Э}:а
+!@ с а б а >:0 {c}:с {I}:0 {н}:н >:0 {д}:0 {Э}:а
 !@ а л т ы н >:0 {i}:ы м >:0 {д}:0 {Э}:а  
 !@ х:х о:о о:о н:н ш:ш у:у >:0 {i}:0 м:м >:0 {н}:0 {I}:у н:н
 !@ э:э в:в >:0 {н}:0 {I}:и н:н
@@ -186,16 +188,17 @@ Cx:Cy <=> _ >: :0* :Unrounded ;
 "{c} gets realized when after a vowel"
 %{c%}:с <=> :Vowel %>: _ ;
 
-"{й} gets realized as 'й' when preceding vowel"
-%{й%}:й <=> [ :Vowel ] %>: _ ;
+!"{й} gets realized as 'й' when preceding vowel"
+!%{й%}:й <=> [ :Vowel ] %>: _ ;
 
 "{й} gets realized as '0' when preceding consonant"
-%{й%}:0 <=> [ :Consonant ] %>: _ ;
+%{й%}:0 <=> [ :Consonant - %{н%}: ] %>: _ ;
+            %{н%}: %>: _ ;
 
 "{д} gets realized as 'д' when preceding voiced"
 %{д%}:д <=> [ :Voiced :Silent* ] %>: _ ;
         except
-            %{i%}: [ м: | н: | %{н%}: ] %>: _ ;
+            [ %{i%}: | %{I%}: ] [ м: | н: | %{н%}: ] %>: _ %{Э%}: .#. ;
 
 "{д} gets realized as 'т' when preceding unvoiced"
 %{д%}:т <=> [ :Unvoiced ] %>: _ ;
@@ -204,10 +207,11 @@ Cx:Cy <=> _ >: :0* :Unrounded ;
 %{з%}:з => _ %>: :Vowel ;
 
 "{д} gets realized as '0' when following this environment"
-%{д%}:0 <=> %{i%}: [ м: | н: | %{н%}: ] %>: _ ;
+%{д%}:0 <=> [ %{i%}: | %{I%}: ] [ м: | н: | %{н%}: ] %>: _ %{Э%}: .#. ;
 
-"{н}:0 in when following a nasal"
-%{н%}:0 <=> :Consonant %>: _ ;
+"{н}:0 when end of word"
+%{н%}:0 <=> _ .#. ;
+            _ %>: :0* :н ;  
 
 ! TO DO: "High vowel realizes as  0 if before Consonant and Vowel"
 ! High:0 <=> _ :Consonant :Vowel ;
