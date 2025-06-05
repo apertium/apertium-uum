@@ -94,7 +94,7 @@ Rules
 
 "Additional vowel harmony case for sub-archiphoneme {a} -> 0"
 %{a%}:0 <=> [ :Vowel ] %>: _ ;
-            [ [ :Vowel - %{у%}: ] :Consonant ]/:0* _ [ :Consonant :Vowel ]/:0* ;
+            [ [ :Vowel - %{у%}: ] :Consonant ]/:0* _ [ :Consonant :Vowel ]/:0* .#. ;
 
 "Vowel harmony for sub-archiphoneme {Е}"
 %{Е%}:Vy => [ :LastVowel :Consonant* :Consonant ]/[ :0 - %{Е%}: ]* _ ;
@@ -133,11 +133,11 @@ Rules
 
 "Additional vowel harmony case for sub-archiphoneme {i} -> 0"
 %{i%}:0 <=> [ :Vowel ] %>: _ ;
-            [ [ :Vowel - %{у%}: ] :Consonant ]/:0* _ [ :Consonant :Vowel ]/:0* ;
+            [ [ :Vowel - %{у%}: ] :Consonant ]/:0* _ [ :Consonant :Vowel ]/:0* .#. ;
 
 !@ х о й >:0 {i}:у р c {I}:у н 
 !@ с а б а >:0 {c}:с {I}:0 {н}:н >:0 {д}:0 {Э}:а
-!@ а л т ы н >:0 {i}:ы м >:0 {д}:0 {Э}:а  
+!@ а л т ы н >:0 {i}:0 м >:0 {д}:0 {Э}:а  
 !@ х:х о:о о:о н:н ш:ш у:у >:0 {i}:0 м:м >:0 {н}:0 {I}:у н:н
 !@ э:э в:в >:0 {н}:0 {I}:и н:н
 

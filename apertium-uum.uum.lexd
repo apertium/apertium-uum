@@ -147,13 +147,12 @@ LEXICON MetaTag
 ###############
 
 PATTERN Verbs
-(V-Root [<v>:] TransitivityTag)[^[tv,iv]] Negation? VPres
+((V-Root [<v>:] TransitivityTag)[^[tv,iv]] Negation? VPres )[^[ar,ir]]
 (V-Root [<v>:] TransitivityTag)[^[tv,iv]] Negation? VPresCond
 (V-Root [<v>:] TransitivityTag)[^[tv,iv]] Negation? VPast
-(V-Root [<v>:] TransitivityTag)[^[tv,iv]] Negation? VImp
+((V-Root [<v>:] TransitivityTag)[^[tv,iv]] Negation? VImp)[^[ar,ir]]
 (V-Root [<v>:] TransitivityTag)[^[tv,iv]] VInf
-# new stuff
-(V-Root [<v>:] TransitivityTag)[^[tv,iv]] VFutIndef
+((V-Root [<v>:] TransitivityTag)[^[tv,iv]] VFutIndef)[^[ar,ir]]
 (V-Root [<v>:] TransitivityTag)[^[tv,iv]] Negation? VFutDef
 (V-Root [<v>:] TransitivityTag)[^[tv,iv]] Negation? VTransgressive
 (V-Root [<v>:] TransitivityTag)[^[tv,iv]] Negation? VPP
@@ -187,7 +186,7 @@ LEXICON VFutDef
 <fdi><p3><sg>:>{Е}дж{A}{к}
 <fdi><p3><pl>:>{Е}дж{A}{к}{Л}{A}р 
 
-LEXICON VPres
+LEXICON VPres[ir]
 <pres><p1><sg>:>{i}й{I}м
 <pres><p1><pl>:>{i}й{I}{к}
 <pres><p2><sg>:>{i}йс{I}н
@@ -195,6 +194,15 @@ LEXICON VPres
 <pres><p3><sg>:>{i}й
 <pres><p3><pl>:>{i}йл{A}р #
 <pres><p3><pl>:>{i}й      # Dir/LR 
+
+LEXICON VPres[ar]
+<pres><p1><sg>:>{a}й{I}м
+<pres><p1><pl>:>{a}й{I}{к}
+<pres><p2><sg>:>{a}йс{I}н
+<pres><p2><pl>:>{a}йс{I}н{I}з
+<pres><p3><sg>:>{a}й
+<pres><p3><pl>:>{a}йл{A}р #
+<pres><p3><pl>:>{a}й      # Dir/LR 
 
 LEXICON VPast
 <past><p1><sg>:>{д}{I}м
@@ -213,11 +221,19 @@ LEXICON VPresCond
 <pres><cni><p3><sg>:>с{A}
 <pres><cni><p3><pl>:>с{A}л{A}р
 
-LEXICON VImp
-<imp><p1><sg>:>
-<imp><p1><pl>:>н{I}з
+LEXICON VImp[ir]
+<imp><p1><sg>:>{i}й{I}м
+<imp><p1><pl>:>{i}й{I}{к}
 <imp><p2><sg>:>
 <imp><p2><pl>:>н{I}з
+<imp><p3><sg>:>с{I}н
+
+LEXICON VImp[ar]
+<imp><p1><sg>:>{a}й{I}м
+<imp><p1><pl>:>{a}й{I}{к}
+<imp><p2><sg>:>
+<imp><p2><pl>:>н{I}з
+<imp><p3><sg>:>с{I}н
 
 LEXICON VInf
 <inf>:>м{A}й{A}
@@ -599,7 +615,7 @@ LEXICON UNKNOWN
 лер:лер
 оон:оон
 
-LEXICON V-Root
+LEXICON V-Root[ir]
 ди:ди[iv] # "say"
 дэ:дэ[iv] # "say"
 эн:эн[iv]
@@ -620,13 +636,14 @@ LEXICON V-Root
 хон:хон[iv]
 йырла:йырла[iv]
 бағла:бағла[tv]
-кӧрӱн:кӧрӱн[iv]
+кӧрӱн:кӧрӱн[iv]  # "be visible"
 чайна:чайна[tv]
 улан:улан[iv]
 гырылда:гырылда[iv]
 ал:ал[tv]
 башла:башла[tv]
 бар:бар[iv]
+бах:бах[tv,ar,-ir]   # "look at, watch"
 биль:биль[iv]
 билий:билий[iv]
 билир:билир[iv]
@@ -636,12 +653,13 @@ LEXICON V-Root
 була:була[tv]
 вер:вер[tv]
 кӧр:кӧр[tv]
+кӧр:кӧр[tv,ar,-ir]   # "see" Dir/LR
 отур:от{у}р[iv]
 отур:отур[iv] # Dir/LR
 ӧгрен:ӧгрен[iv]
-сӧле:сӧле[iv]
+сӧле:сӧле[iv]        # "speak"
 шит:шит[tv]
-чых:чых[iv]
+чых:чых[iv,ar,-ir]   # "go out"
 тʼель:тʼель[iv]
 тʼетир:тʼетир[tv]
 тʼет:тʼет[iv]
@@ -650,7 +668,7 @@ LEXICON V-Root
 йут:йут[tv]
 шоп:шоп[tv]
 йар:йар[tv]
-ал:ал[tv]
+ал:ал[tv]       # "take"
 хал:хал[iv]
 халдыр:халдыр[tv]
 ах:ах[iv]
@@ -662,7 +680,7 @@ LEXICON V-Root
 хон:хон[iv]
 хыр:хыр[tv]
 айт:айт[iv] # "speak"
-хой:хой[tv]
+хой:хой[tv] # "put"
 оху:оху[tv] # "read"
 оху:оху[iv] # "read"
 
