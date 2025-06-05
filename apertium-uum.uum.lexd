@@ -174,7 +174,7 @@ LEXICON VPP # дієприкметник
 LEXICON VFutIndef
 <fut><p1><sg>:>{i}р{I}м
 <fut><p1><pl>:>{i}р{I}{к}
-<fut><p2><sg>:>{i}рc{I}н
+<fut><p2><sg>:>{i}рс{I}н
 <fut><p2><pl>:>{i}рс{I}н{I}з
 <fut><p3><sg>:>{i}р
 <fut><p3><pl>:>{i}л{A}р
