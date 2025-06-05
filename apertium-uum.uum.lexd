@@ -170,13 +170,21 @@ LEXICON VTransgressive # дієприслівник
 LEXICON VPP # дієприкметник
 <pp>:>{й}{A}н
 
-LEXICON VFutIndef
+LEXICON VFutIndef[ir]
 <fut><p1><sg>:>{i}р{I}м
 <fut><p1><pl>:>{i}р{I}{к}
 <fut><p2><sg>:>{i}рс{I}н
 <fut><p2><pl>:>{i}рс{I}н{I}з
 <fut><p3><sg>:>{i}р
 <fut><p3><pl>:>{i}л{A}р
+
+LEXICON VFutIndef[ar]
+<fut><p1><sg>:>{a}р{I}м
+<fut><p1><pl>:>{a}р{I}{к}
+<fut><p2><sg>:>{a}рс{I}н
+<fut><p2><pl>:>{a}рс{I}н{I}з
+<fut><p3><sg>:>{a}р
+<fut><p3><pl>:>{a}л{A}р
 
 LEXICON VFutDef
 <fdi><p1><sg>:>{Е}дж{A}м
