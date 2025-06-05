@@ -153,6 +153,7 @@ PATTERN Verbs
 ((V-Root [<v>:] TransitivityTag)[^[tv,iv]] Negation? VImp)[^[ar,ir]]
 (V-Root [<v>:] TransitivityTag)[^[tv,iv]] VInf
 ((V-Root [<v>:] TransitivityTag)[^[tv,iv]] VFutIndef)[^[ar,ir]]
+(V-Root [<v>:] TransitivityTag)[^[tv,iv]] VFutIndefNeg
 (V-Root [<v>:] TransitivityTag)[^[tv,iv]] Negation? VFutDef
 (V-Root [<v>:] TransitivityTag)[^[tv,iv]] Negation? VTransgressive
 (V-Root [<v>:] TransitivityTag)[^[tv,iv]] Negation? VPP
@@ -169,6 +170,7 @@ LEXICON VTransgressive # дієприслівник
 
 LEXICON VPP # дієприкметник
 <pp>:>{й}{A}н
+<pp2>:>м{I}ш
 
 LEXICON VFutIndef[ir]
 <fut><p1><sg>:>{i}р{I}м
@@ -185,6 +187,15 @@ LEXICON VFutIndef[ar]
 <fut><p2><pl>:>{a}рс{I}н{I}з
 <fut><p3><sg>:>{a}р
 <fut><p3><pl>:>{a}л{A}р
+
+LEXICON VFutIndefNeg
+<neg><fut><p1><sg>:>м{Э}м
+<neg><fut><p1><pl>:>м{Э}з{I}{к}
+<neg><fut><p2><sg>:>м{Э}с{I}н
+<neg><fut><p2><pl>:>м{Э}н{I}з
+<neg><fut><p3><sg>:>м{Э}з
+<neg><fut><p3><pl>:>м{Э}зл{A}р
+<neg><fut><p3><pl>:>м{Э}з     # Dir/LR
 
 LEXICON VFutDef
 <fdi><p1><sg>:>{Е}дж{A}м
@@ -213,21 +224,21 @@ LEXICON VPres[ar]
 <pres><p3><pl>:>{a}й      # Dir/LR 
 
 LEXICON VPast
-<past><p1><sg>:>{д}{I}м
-<past><p1><pl>:>{д}{I}{к}
-<past><p2><sg>:>{д}{I}н
-<past><p2><pl>:>{д}{I}н{I}з
+<past><p1><sg>:>{д}{I}>м
+<past><p1><pl>:>{д}{I}>{к}
+<past><p2><sg>:>{д}{I}>н
+<past><p2><pl>:>{д}{I}>н{I}з
 <past><p3><sg>:>{д}{I}
-<past><p3><pl>:>{д}{I}л{A}р #
+<past><p3><pl>:>{д}{I}>л{A}р #
 <past><p3><pl>:>{д}{I}      # Dir/LR 
 
 LEXICON VPresCond
-<pres><cni><p1><sg>:>с{A}м
-<pres><cni><p1><pl>:>с{A}х
-<pres><cni><p2><sg>:>с{A}н
-<pres><cni><p2><pl>:>с{A}н{I}з
+<pres><cni><p1><sg>:>с{A}>м
+<pres><cni><p1><pl>:>с{A}>х
+<pres><cni><p2><sg>:>с{A}>н
+<pres><cni><p2><pl>:>с{A}>н{I}з
 <pres><cni><p3><sg>:>с{A}
-<pres><cni><p3><pl>:>с{A}л{A}р
+<pres><cni><p3><pl>:>с{A}>л{A}р
 
 LEXICON VImp[ir]
 <imp><p1><sg>:>{i}й{I}м
@@ -235,6 +246,7 @@ LEXICON VImp[ir]
 <imp><p2><sg>:>
 <imp><p2><pl>:>н{I}з
 <imp><p3><sg>:>с{I}н
+<imp><p3><pl>:>с{I}н   # CHECK
 
 LEXICON VImp[ar]
 <imp><p1><sg>:>{a}й{I}м
@@ -242,6 +254,7 @@ LEXICON VImp[ar]
 <imp><p2><sg>:>
 <imp><p2><pl>:>н{I}з
 <imp><p3><sg>:>с{I}н
+<imp><p3><pl>:>с{I}н   # CHECK
 
 LEXICON VInf
 <inf>:>м{A}й{A}
