@@ -701,7 +701,7 @@ LEXICON V-Root[ir]
 хон:хон[iv]
 хыр:хыр[tv]
 айт:айт[iv] # "speak"
-хой:хой[tv] # "put"
+хой:хой[tv,ar,-ir] # "put"
 оху:оху[tv] # "read"
 оху:оху[iv] # "read"
 
