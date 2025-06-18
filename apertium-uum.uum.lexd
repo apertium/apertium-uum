@@ -258,6 +258,8 @@ LEXICON VImp[ar]
 
 LEXICON VInf
 <inf>:>м{A}й{A}
+<gna_impf>:>{Е}
+<neg><gna_impf>:>m{A}>{Е}
 
 # LEXICON VConditional
 # See the screenshot on Telegram, lol
@@ -333,7 +335,8 @@ LEXICON N-Root
 ах:ах
 ан:ан
 ана:ана
-ат:ат
+ат:ат # "horse; name"
+ата:ата # "father; ancestor"
 астʼер:астʼер
 алтын:алтын
 базар:базар
@@ -705,6 +708,8 @@ LEXICON V-Root[ir]
 хой:хой[tv,ar,-ir] # "put"
 оху:оху[tv] # "read"
 оху:оху[iv] # "read"
+ат:ат[iv] # "jump across"
+ат:ат[tv] # "throw; shoot"
 
 PATTERN Number
 Numeral+ [<num>:]
