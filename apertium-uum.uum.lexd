@@ -120,7 +120,7 @@ PATTERN Particles
 Part-Root [ <part>: ]
 
 PATTERN Determiners
-Det-Root [ <det>: ]
+Det-Root(1) [ <det>: ] Det-Root(2)
 
 PATTERN Interjections
 Intj-Root [ <intj>: ]
@@ -133,7 +133,9 @@ PATTERN Abbreviations
 Abbr-Root [ <abbr>: ]
 
 PATTERN Pronouns
-(Prn-Root [ <prn>: ] MetaTag)[^[dem]]
+Prn-Root(1) [ <prn>: ] Prn-Root(2) Cases
+Prn-Misc [ <prn>: ]   # FIXME: figure out what each of these is
+Prn-Pers(1) [ <prn><pers>: ] Prn-Pers(2) Cases
 
 PATTERN PropNouns
 PropN-Root(1) [ <np>: ] PropN-Root(2) Plurality? Possession? Cases 
@@ -325,31 +327,35 @@ LEXICON Num-types
 # Delete all of the files in /test and regenerate them after changing the wiki
 
 LEXICON N-Root
-айахташ:айахташ
-айакташ:айакташ
-абла:абла
-аға:аға
-адам:адам
-ай:ай
-аллах:аллах
-ах:ах
-ан:ан
-ана:ана
+айахташ:айахташ # "friend"
+айахташ:айакташ # "friend"   # Dir/LR
+абла:абла # "older sister"
+аға:аға # "older brother"
+адам:адам # "person"
+ай:ай # "moon, month, saint"
+аллах:аллах # "God"
+ах:ах # "remuneration, salary, price, value, cost"
+ан:ан # "moment, instant"
+ана:ана # "mother, old lady"
 ат:ат # "horse; name"
 ата:ата # "father; ancestor"
-астʼер:астʼер
-алтын:алтын
-базар:базар
-бал:бал
-бала:бала
-бахчы:бахчы
+астʼер:астʼер # "army; soldier"
+алтын:алтын # "gold"
+баға:баға # "price, cost, value"
+баға:баа # "price, cost, value"  # Dir/LR
+базар:базар # "market, Sunday"
+баҗы:баҗы # "younger sister"
+баҗы:баҗу # "younger sister"  # Dir/LR
+бал:бал # "honey"
+бала:бала # "child"
+бахчы:бахчы # "garden"
 бағыш:бағыш
 башлавужу:башлавужу
 бӱльбӱль:бӱльбӱль
 бӱйӱгӱ:бӱйӱгӱ
 бешик:беши{к}
 вахт:вахт
-вахыт:вахыт # Dir/LR
+вахт:вахыт # Dir/LR
 доғуш:доғуш
 дӱнйа:дӱнйа
 гӱль:гӱл{ь}
@@ -402,18 +408,17 @@ LEXICON N-Root
 хапу:хапӱ # Dir/LR
 хооншу:хооншу
 хурйух:хурйух
-хыз:хыз
-хоз:хоз
-хой:хой # "sheep"
+хыз:хыз # "girl"
+хоз:хоз # "lamb"
 хуш:хуш # "bird"
 шаэр:шаэр
 ший:ший
 эв:эв
 эль:эл{ь} # "hand"
 чӧль:чӧл{ь} # "field"
-чырайы:чырайы
-чобан:чобан
-махлук:махлук
+чырай:чырай # "face, expression, complexion"
+чобан:чобан # "shepherd"
+махлук:махлук # ???
 ан:ан # moment
 ахыз:ахыз # to appeal
 йылдыз:йылдыз # "star"
@@ -421,9 +426,9 @@ LEXICON N-Root
 пичен:пичен # "hay"
 йасла:йасла # "manger"
 башлавужу:башлавужу # "founder"
-баш:баш # head
-ышхын:ышхын
-тӱрк:тӱрк # song
+баш:баш # "head"
+ышхын:ышхын # "light"
+тӱрк:тӱрк # "song"
 учхун:учхун
 җан:җан
 җеннет:җеннет # "heaven"
@@ -486,24 +491,31 @@ LEXICON Adj-Root
 аста:аста
 алхын:алхын
 
-LEXICON Prn-Root
+LEXICON Prn-Root(2)
+не:не       <itg>:
+о:о         <dem>:
+бу:бу       <dem>:
+
+LEXICON Prn-Misc
 андаче:андаче[dem]
-абу:абу
-аблар:аблар
 бир:бир
 бун:бун[dem]
 алай:алай
 алаймыз:алаймыз
-сен:сен
-не:не
-мен:мен
-биз:биз
 ӧле:ӧле
-о:о[dem]
-о:о[non-dem]
 эр:эр
 нас:нас
 насын:насын
+абу:абу
+аблар:аблар
+
+LEXICON Prn-Pers(2)
+
+мен:мен      <p1><sg>:
+сен:сен      <p2><sg>:
+биз:биз      <p1><pl>:
+о:о          <p3><sg>:
+
 
 LEXICON Adv-Root
 даа:даа
@@ -520,7 +532,8 @@ LEXICON Adv-Root
 тʼи:тʼи                 # here/suddenly
 
 LEXICON Det-Root(2)
-бу:бу           <dem><sg>:
+бу:бу           <dem>:
+о:о             <dem>:
 
 
 LEXICON Conj-Root
