@@ -327,24 +327,28 @@ LEXICON Num-types
 # Delete all of the files in /test and regenerate them after changing the wiki
 
 LEXICON N-Root
-айахташ:айахташ
-айакташ:айакташ
-абла:абла
-аға:аға
-адам:адам
-ай:ай
-аллах:аллах
-ах:ах
-ан:ан
-ана:ана
+айахташ:айахташ # "friend"
+айахташ:айакташ # "friend"   # Dir/LR
+абла:абла # "older sister"
+аға:аға # "older brother"
+адам:адам # "person"
+ай:ай # "moon, month, saint"
+аллах:аллах # "God"
+ах:ах # "remuneration, salary, price, value, cost"
+ан:ан # "moment, instant"
+ана:ана # "mother, old lady"
 ат:ат # "horse; name"
 ата:ата # "father; ancestor"
-астʼер:астʼер
-алтын:алтын
-базар:базар
-бал:бал
-бала:бала
-бахчы:бахчы
+астʼер:астʼер # "army; soldier"
+алтын:алтын # "gold"
+баға:баға # "price, cost, value"
+баға:баа # "price, cost, value"  # Dir/LR
+базар:базар # "market, Sunday"
+баҗы:баҗы # "younger sister"
+баҗы:баҗу # "younger sister"  # Dir/LR
+бал:бал # "honey"
+бала:бала # "child"
+бахчы:бахчы # "garden"
 бағыш:бағыш
 башлавужу:башлавужу
 бӱльбӱль:бӱльбӱль
@@ -404,17 +408,17 @@ LEXICON N-Root
 хапу:хапӱ # Dir/LR
 хооншу:хооншу
 хурйух:хурйух
-хыз:хыз
-хоз:хоз
+хыз:хыз # "girl"
+хоз:хоз # "lamb"
 хуш:хуш # "bird"
 шаэр:шаэр
 ший:ший
 эв:эв
 эль:эл{ь} # "hand"
 чӧль:чӧл{ь} # "field"
-чырайы:чырайы
-чобан:чобан
-махлук:махлук
+чырай:чырай # "face, expression, complexion"
+чобан:чобан # "shepherd"
+махлук:махлук # ???
 ан:ан # moment
 ахыз:ахыз # to appeal
 йылдыз:йылдыз # "star"
@@ -422,9 +426,9 @@ LEXICON N-Root
 пичен:пичен # "hay"
 йасла:йасла # "manger"
 башлавужу:башлавужу # "founder"
-баш:баш # head
-ышхын:ышхын
-тӱрк:тӱрк # song
+баш:баш # "head"
+ышхын:ышхын # "light"
+тӱрк:тӱрк # "song"
 учхун:учхун
 җан:җан
 җеннет:җеннет # "heaven"
