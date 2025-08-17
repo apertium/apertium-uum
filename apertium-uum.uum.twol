@@ -20,6 +20,7 @@
  %{Д%}:д %{Д%}:т
  %{н%}:н %{н%}:0
  %{у%}:у %{у%}:0
+ %{ӱ%}:ӱ %{ӱ%}:0
  %{м%}:м %{м%}:0
  ! C is english
  %{c%}:с %{c%}:0 ! %{c%}:з
@@ -184,6 +185,9 @@ Cx:Cy <=> _ >: :0* :Unrounded ;
 
 "{у} gets realized as 0 when a suffix starting with a vowel is added otru"
 %{у%}:0 <=> _ [ :Consonant :Vowel ]/:0* ;
+
+"{ӱ} gets realized as 0 when a suffix starting with a vowel follows"
+%{ӱ%}:0 <=> _ [ :Consonant :Vowel ]/:0* ;
 
 ! rules for possession + locative
 "{c} gets realized when after a vowel"

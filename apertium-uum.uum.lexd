@@ -376,12 +376,13 @@ LEXICON N-Root
 баҗы:баҗу # "younger sister"  # Dir/LR
 бела:бела
 бешик:беши{к}
-бӱйӱгӱ:бӱйӱгӱ
+бӱйӱк\ аға:бӱйӱк\ аға # "older brother"
+бӱйӱк\ апа:бӱйӱк\ апа # "older sister"
 бӱльбӱль:бӱльбӱль
 вахт:вахт # "time, happiness, fate"
 вахт:вахыт # "time, happiness, fate" Dir/LR
-гӧнлӱм:гӧнлӱм
-гӧңӱль:гӧңӱл{ь}
+гӧңӱль:гӧң{ӱ}л{ь} # "heart, soul, desire, mood"
+гӧңӱль:гӧн{ӱ}л{ь} # "heart, soul, desire, mood" Dir/LR
 гӱль:гӱл{ь}
 джан:джан
 доғуш:доғуш
@@ -407,6 +408,8 @@ LEXICON N-Root
 кӧй:кӧй # "village"
 кӧк:кӧк
 кӧпек:кӧпек
+кӱль:кӱл{ь} # "ash"
+кӱль:гӱл{ь} # "ash" Dir/LR
 кӱн:кӱн
 кӱн\ доғуш:кӱн\ доғуш
 махлук:махлук # ???
@@ -483,10 +486,14 @@ LEXICON Adj-Root
 йарых:йарых # "light"
 тэна:тэна # "peaceful"
 ахыллы:ахыллы # "wise"
-ғарип:ғарип
+ғарип:ғарип # "stranger"
 блашых:блашых
 аста:аста
 алхын:алхын
+ғарип:ғарип # "poor, unfortunate"
+доғру:доғру # "straight, correct, true, direct, genuine" Dir/LR
+доғру:доғур # "straight" Dir/LR
+доғру:доғуру # "straight" Dir/LR
 
 LEXICON Prn-Root(2)
 не:не       <itg>:
